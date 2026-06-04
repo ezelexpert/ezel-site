@@ -8,14 +8,33 @@
   <!-- Domeniu live: https://ezel.ro -->
   <title>EZEL — Cazare pentru muncitori și ingineri în Oradea | B2B Accommodation</title>
   <meta name="description" content="EZEL — spații de cazare pentru muncitori și ingineri în Oradea. Cazare B2B pentru companii: camere moderne, sigure, complet echipate, contracte clare. Sună sau scrie pe WhatsApp.">
-  <meta name="keywords" content="cazare muncitori Oradea, spații de cazare muncitori, cazare ingineri Oradea, cazare B2B Oradea, cazare firme Oradea, cazare echipe Oradea">
-  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="cazare muncitori Oradea, cazare muncitori în Oradea, spații de cazare muncitori, cazare ingineri Oradea, cazare B2B Oradea, cazare firme Oradea, cazare echipe Oradea, cazare angajați Oradea">
+  <meta name="author" content="EZEL — B2B Accommodation">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#1a1a18">
   <link rel="canonical" href="https://ezel.ro/">
+
+  <!-- Geo / local SEO -->
+  <meta name="geo.region" content="RO-BH">
+  <meta name="geo.placename" content="Oradea">
+  <meta name="geo.position" content="47.0722;21.9211">
+  <meta name="ICBM" content="47.0722, 21.9211">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="EZEL — Cazare pentru muncitori și ingineri în Oradea">
   <meta property="og:description" content="Spații de cazare B2B pentru companii în Oradea. Camere moderne, contracte clare, disponibilitate rapidă.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ezel.ro/">
   <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="EZEL — B2B Accommodation">
+  <meta property="og:image" content="https://ezel.ro/poze/cladire.jpg">
+  <meta property="og:image:alt" content="Cazare pentru muncitori și ingineri în Oradea — EZEL">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EZEL — Cazare pentru muncitori și ingineri în Oradea">
+  <meta name="twitter:description" content="Cazare B2B pentru companii în Oradea: camere moderne, contracte clare, disponibilitate rapidă.">
+  <meta name="twitter:image" content="https://ezel.ro/poze/cladire.jpg">
 
   <!-- Date structurate: business local + website + organizație -->
   <script type="application/ld+json">
@@ -28,9 +47,12 @@
         "name":"EZEL — B2B Accommodation",
         "description":"Spații de cazare pentru muncitori și ingineri în Oradea. Cazare B2B pentru companii.",
         "url":"https://ezel.ro/",
+        "image":"https://ezel.ro/poze/cladire.jpg",
         "telephone":"+40726925094",
-        "areaServed":"Oradea, Bihor, România",
+        "areaServed":["Oradea","Bihor","România"],
         "address":{"@type":"PostalAddress","streetAddress":"Str. Ovid Densușianu 1A, Bl. C3","addressLocality":"Oradea","addressRegion":"Bihor","postalCode":"410237","addressCountry":"RO"},
+        "geo":{"@type":"GeoCoordinates","latitude":47.0722,"longitude":21.9211},
+        "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},
         "priceRange":"$$",
         "amenityFeature":[
           {"@type":"LocationFeatureSpecification","name":"WiFi gratuit","value":true},
@@ -72,9 +94,12 @@
   }
   </script>
 
+  <link rel="preload" as="image" href="poze/exterior-close.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/ezel.css">
+  <script src="js/ezel.js" defer></script>
 </head>
 <body id="top">
 
@@ -84,13 +109,16 @@
     
     <span class="logo-txt"><span class="logo-name">EZEL</span><span class="logo-sub">B2B Accommodation</span></span>
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-menu">
     <li><a href="#avantaje">Avantaje</a></li>
     <li><a href="#galerie">Galerie</a></li>
     <li><a href="#recenzii">Recenzii</a></li>
-    <li><a href="ghid-cazare-muncitori-ingineri-oradea.html">Ghid</a></li>
     <li><a href="#faq">Întrebări</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li class="nav-links-cta"><a href="https://wa.me/40726925094" target="_blank" rel="noopener">Rezervă acum</a></li>
   </ul>
   <a href="https://wa.me/40726925094" class="nav-cta" target="_blank" rel="noopener">Rezervă acum</a>
 </nav>
@@ -99,8 +127,9 @@
 <section class="hero">
   <div class="hero-left">
     <p class="hero-label fade-up">Cazare B2B · Muncitori &amp; Ingineri · Oradea</p>
-    <h1 class="hero-title fade-up">Acasă<br><em>oriunde</em><br>lucrezi</h1>
-    <p class="hero-subtitle fade-up">EZEL oferă spații de cazare moderne, sigure și complet echipate — gândite pentru muncitorii și inginerii companiei tale, aflați departe de casă, în Oradea.</p>
+    <h1 class="hero-title fade-up">Cazare muncitori<br>și ingineri<br>în <em>Oradea</em></h1>
+    <p class="hero-tagline fade-up">Acasă, oriunde lucrezi.</p>
+    <p class="hero-subtitle fade-up">EZEL oferă spații de cazare moderne, sigure și complet echipate pentru muncitori și ingineri în Oradea — gândite pentru echipele companiei tale, aflate departe de casă.</p>
     <div class="hero-actions fade-up">
       <a href="#contact" class="btn-primary">Solicită o ofertă</a>
       <a href="#galerie" class="btn-secondary">Vezi spațiile</a>
@@ -174,7 +203,7 @@
     <details class="faq-item fade-up"><summary>Faceți contract și factură pe firmă?</summary><div class="faq-answer">Da. Lucrăm exclusiv B2B, cu contracte și facturare clare, adaptate nevoilor companiei dumneavoastră.</div></details>
     <details class="faq-item fade-up"><summary>Unde sunt situate spațiile de cazare?</summary><div class="faq-answer">Locațiile noastre sunt în Oradea, aproape de zonele industriale și de căile principale de acces, pentru deplasări rapide la punctul de lucru.</div></details>
     <details class="faq-item fade-up"><summary>Cât de repede putem caza o echipă?</summary><div class="faq-answer">Răspundem prompt și putem aranja cazarea în cel mai scurt timp. Sunați-ne sau scrieți-ne pe WhatsApp pentru disponibilitate și o ofertă pe loc.</div></details>
-    <details class="faq-item fade-up"><summary>Cât costă cazarea unei echipe?</summary><div class="faq-answer">Prețul depinde de numărul de persoane și de perioadă. Vedeți <a href="cat-costa-cazarea-muncitori-oradea.html">ghidul de costuri</a> sau cereți o ofertă personalizată.</div></details>
+    <details class="faq-item fade-up"><summary>Cât costă cazarea unei echipe?</summary><div class="faq-answer">Prețul depinde de numărul de persoane și de perioadă. Scrieți-ne pe WhatsApp sau sunați-ne și vă facem o ofertă personalizată, pe loc.</div></details>
   </div>
 </section>
 
@@ -215,9 +244,9 @@
     EZEL
   </div>
   <nav class="footer-nav">
-    <a href="ghid-cazare-muncitori-ingineri-oradea.html">Ghid cazare</a>
-    <a href="cat-costa-cazarea-muncitori-oradea.html">Costuri</a>
-    <a href="cazare-muncitori-vs-hotel.html">Cazare vs hotel</a>
+    <a href="#avantaje">Avantaje</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#faq">Întrebări</a>
     <a href="#contact">Contact</a>
   </nav>
   <p class="footer-text">📍 Str. Ovid Densușianu 1A, Bl. C3, Oradea 410237 · 📞 +40 726 925 094<br>© 2026 EZEL · B2B Accommodation · Cazare muncitori și ingineri · Oradea</p>
