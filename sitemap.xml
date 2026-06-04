@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Domeniu: https://ezel.ro -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ezel.ro/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ezel.ro/ghid-cazare-muncitori-ingineri-oradea.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ezel.ro/cat-costa-cazarea-muncitori-oradea.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ezel.ro/cazare-muncitori-vs-hotel.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
