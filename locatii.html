@@ -97,7 +97,9 @@
   ];
 
   (function () {
-    var map = L.map('map', { scrollWheelZoom: false }).setView([47.0722, 21.9211], 12);
+    var map = L.map('map', { scrollWheelZoom: false });
+    // vedere inițială largă: Oradea + împrejurimi (Oșorhei, Cihei, Haieu)
+    map.fitBounds([[46.95, 21.83], [47.11, 22.07]]);
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 19, attribution: 'Tiles &copy; Esri'
     }).addTo(map);
@@ -108,7 +110,10 @@
     function place(loc, lat, lng) {
       L.marker([lat, lng]).addTo(map);
       bounds.push([lat, lng]);
-      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
+    }
+    // potrivește harta pe toate pinurile
+    function fitAll() {
+      if (bounds.length) map.fitBounds(bounds, { padding: [50, 50] });
     }
 
     // geocodare: Photon (komoot) cu Nominatim ca rezervă
@@ -134,7 +139,7 @@
     // secvențial + cache local
     var i = 0;
     function next() {
-      if (i >= EZEL_LOCATIONS.length) return;
+      if (i >= EZEL_LOCATIONS.length) { fitAll(); return; }
       var loc = EZEL_LOCATIONS[i++];
       if (loc.lat && loc.lng) { place(loc, loc.lat, loc.lng); return next(); }
       var key = 'ezelgeo2:' + loc.address;
