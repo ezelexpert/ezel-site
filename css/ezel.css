@@ -20,13 +20,10 @@ nav{ position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-it
   justify-content:space-between; padding:1rem 4rem; background:rgba(247,243,236,.97);
   backdrop-filter:blur(12px); border-bottom:1px solid rgba(184,150,46,.25);
   box-shadow:0 2px 16px rgba(26,26,24,.08); }
-.logo{ display:flex; align-items:center; gap:.65rem; text-decoration:none; }
-.logo .em{ width:32px; height:32px; flex:0 0 auto; }
-.logo .em path, .logo .em line{ stroke:var(--gold); fill:none; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
-.logo .em .key{ fill:var(--gold); stroke:none; }
-.logo-txt{ display:flex; flex-direction:column; line-height:1; }
-.logo-name{ font-family:var(--serif); font-size:1.65rem; font-weight:600; letter-spacing:.14em; color:var(--ink); padding-left:.14em; }
-.logo-sub{ font-family:var(--sans); font-size:.52rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-top:3px; padding-left:.16em; }
+.logo{ display:flex; flex-direction:column; align-items:center; gap:2px; text-decoration:none; line-height:1; }
+.logo-txt{ display:flex; flex-direction:column; align-items:center; line-height:1; }
+.logo-name{ font-family:var(--serif); font-size:1.65rem; font-weight:600; letter-spacing:.14em; color:var(--ink); text-align:center; padding-left:.14em; }
+.logo-sub{ font-family:var(--sans); font-size:.52rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-top:4px; text-align:center; padding-left:.3em; }
 .nav-links{ display:flex; gap:2.3rem; list-style:none; align-items:center; }
 .nav-links a{ text-decoration:none; color:var(--muted); font-size:.85rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; transition:color .2s; }
 .nav-links a:hover{ color:var(--gold); }
