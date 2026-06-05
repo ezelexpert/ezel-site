@@ -217,6 +217,12 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 .float-wa:hover{ transform:scale(1.1); box-shadow:0 12px 32px rgba(37,211,102,.55); }
 @keyframes pulse{ 0%,100%{ box-shadow:0 8px 24px rgba(37,211,102,.4); } 50%{ box-shadow:0 8px 36px rgba(37,211,102,.65); } }
 .float-wa svg{ width:30px; height:30px; fill:#fff; }
+/* buton flotant de apel (deasupra celui WhatsApp) */
+.float-call{ position:fixed; bottom:calc(2rem + 70px); right:2rem; z-index:200; width:58px; height:58px; border-radius:50%; background:var(--gold);
+  display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 8px 24px rgba(184,150,46,.4);
+  transition:transform .25s, box-shadow .25s; }
+.float-call:hover{ transform:scale(1.1); box-shadow:0 12px 32px rgba(184,150,46,.55); }
+.float-call svg{ width:28px; height:28px; fill:#fff; }
 
 /* ── ANIMATIONS ── */
 .fade-up{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
