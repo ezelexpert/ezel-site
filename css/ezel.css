@@ -147,9 +147,8 @@ section{ padding:7rem 5rem; }
   background:#fff; border:1px solid rgba(184,150,46,.18); border-radius:10px; overflow:hidden; }
 .partner-logo img{ max-width:100%; max-height:100%; object-fit:contain; transition:transform .3s; }
 .partner-logo:hover img{ transform:scale(1.05); }
-/* ajustări individuale pe logo-uri (după ordinea din pagină) */
-#parteneri .partner-logo:nth-child(10) img{ transform:scale(1.5); }
-#parteneri .partner-logo:nth-child(10):hover img{ transform:scale(1.58); }
+/* ajustări individuale pe logo-uri (după fișier, ca să nu depindă de ordine) */
+#parteneri .partner-logo img[src*="partener10.png"]{ transform:scale(1.5); }
 .partner-logo .ph{ color:var(--muted); font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; text-align:center; }
 
 /* ── FAQ ── */
