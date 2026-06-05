@@ -145,6 +145,7 @@ section{ padding:4.5rem 5rem; }
 .carousel-btn:hover{ background:var(--gold-lt); opacity:1; transform:translateY(-50%) scale(1.06); }
 .carousel-prev{ left:1rem; }
 .carousel-next{ right:1rem; }
+.carousel-btn{ display:none; }
 
 /* recenzii ca slider */
 .reviews-track{ display:flex; gap:1.5rem; padding:.5rem .25rem 1rem; }

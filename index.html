@@ -54,11 +54,14 @@
         "geo":{"@type":"GeoCoordinates","latitude":47.0722,"longitude":21.9211},
         "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},
         "priceRange":"$$",
-        "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"3"},
+        "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"6"},
         "review":[
           {"@type":"Review","author":{"@type":"Person","name":"Floppy Cosmin"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Recomand, camere și băi curate, parcare. Totul perfect!"},
           {"@type":"Review","author":{"@type":"Person","name":"Ionuț Pop"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"O cazare călduroasă și primitoare, pe care o recomand cu încredere datorită condițiilor, dar și a gazdei primitoare."},
-          {"@type":"Review","author":{"@type":"Person","name":"Andrei Salajan"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Camerele sunt foarte curate. Personal amabil și respectuos. Servicii foarte bune. Recomand!"}
+          {"@type":"Review","author":{"@type":"Person","name":"Andrei Salajan"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Camerele sunt foarte curate. Personal amabil și respectuos. Servicii foarte bune. Recomand!"},
+          {"@type":"Review","author":{"@type":"Person","name":"Carwash Vulcprest"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Cele mai bune servicii pentru cazare pentru muncitori, prețuri atractive, personal amabil."},
+          {"@type":"Review","author":{"@type":"Person","name":"Profiri Vlad"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Camere foarte bune pentru echipe de muncitori. Prețuri accesibile, firmă serioasă."},
+          {"@type":"Review","author":{"@type":"Person","name":"Sipos Eugen"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Ideal pentru muncitori — paturi individuale și baie la fiecare cameră."}
         ],
         "amenityFeature":[
           {"@type":"LocationFeatureSpecification","name":"WiFi gratuit","value":true},
@@ -104,8 +107,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/ezel.css?v=23">
-  <script src="js/ezel.js?v=23" defer></script>
+  <link rel="stylesheet" href="css/ezel.css?v=24">
+  <script src="js/ezel.js?v=24" defer></script>
 </head>
 <body id="top">
 
@@ -189,7 +192,7 @@
     <p class="section-label">Galerie foto</p>
     <h2 class="section-title">Spații <em>gândite</em><br>pentru confort real</h2>
   </div>
-  <div class="carousel" data-autoplay="3500">
+  <div class="carousel" data-autoplay="5000">
     <button class="carousel-btn carousel-prev" type="button" aria-label="Imaginea anterioară">‹</button>
     <div class="gallery-scroll carousel-track">
     <div class="gallery-item"><img src="poze/dormitor-1.jpg" alt="Cameră cu mai multe paturi pentru cazare muncitori Oradea" loading="lazy"><div class="gallery-caption">Cameră cu mai multe paturi</div></div>
@@ -211,12 +214,15 @@
     <p class="section-label">Recenzii</p>
     <h2 class="section-title">Ce spun companiile<br><em>care lucrează</em> cu noi</h2>
   </div>
-  <div class="carousel" data-autoplay="6000">
+  <div class="carousel" data-autoplay="5000">
     <button class="carousel-btn carousel-prev" type="button" aria-label="Recenzia anterioară">‹</button>
     <div class="reviews-track carousel-track">
       <div class="review-card fade-up"><div class="quote-mark">"</div><div class="stars">★★★★★</div><p class="review-text">Recomand, camere și băi curate, parcare. Totul perfect! 👌</p><div class="reviewer"><div class="reviewer-avatar">F</div><div><div class="reviewer-name">Floppy Cosmin</div><div class="reviewer-role">Recenzie Google · ★★★★★</div></div></div></div>
       <div class="review-card fade-up"><div class="quote-mark">"</div><div class="stars">★★★★★</div><p class="review-text">O cazare călduroasă și primitoare, pe care o recomand cu încredere datorită condițiilor, dar și a gazdei primitoare.</p><div class="reviewer"><div class="reviewer-avatar">I</div><div><div class="reviewer-name">Ionuț Pop</div><div class="reviewer-role">Recenzie Google · ★★★★★</div></div></div></div>
       <div class="review-card fade-up"><div class="quote-mark">"</div><div class="stars">★★★★★</div><p class="review-text">Camerele sunt foarte curate. Personal amabil și respectuos. Servicii foarte bune. Recomand!</p><div class="reviewer"><div class="reviewer-avatar">A</div><div><div class="reviewer-name">Andrei Salajan</div><div class="reviewer-role">Recenzie Google · ★★★★★</div></div></div></div>
+      <div class="review-card fade-up"><div class="quote-mark">"</div><div class="stars">★★★★★</div><p class="review-text">Cele mai bune servicii pentru cazare pentru muncitori, prețuri atractive, personal amabil.</p><div class="reviewer"><div class="reviewer-avatar">C</div><div><div class="reviewer-name">Carwash Vulcprest</div><div class="reviewer-role">Recenzie Google · ★★★★★</div></div></div></div>
+      <div class="review-card fade-up"><div class="quote-mark">"</div><div class="stars">★★★★★</div><p class="review-text">Camere foarte bune pentru echipe de muncitori. Prețuri accesibile, firmă serioasă.</p><div class="reviewer"><div class="reviewer-avatar">P</div><div><div class="reviewer-name">Profiri Vlad</div><div class="reviewer-role">Recenzie Google · ★★★★★</div></div></div></div>
+      <div class="review-card fade-up"><div class="quote-mark">"</div><div class="stars">★★★★★</div><p class="review-text">Ideal pentru muncitori — paturi individuale și baie la fiecare cameră.</p><div class="reviewer"><div class="reviewer-avatar">S</div><div><div class="reviewer-name">Sipos Eugen</div><div class="reviewer-role">Local Guide · Recenzie Google · ★★★★★</div></div></div></div>
     </div>
     <button class="carousel-btn carousel-next" type="button" aria-label="Recenzia următoare">›</button>
   </div>
@@ -228,7 +234,7 @@
     <p class="section-label">Parteneri &amp; clienți</p>
     <h2 class="section-title">Companii care <em>au ales</em> EZEL</h2>
   </div>
-  <div class="carousel" data-autoplay="2500">
+  <div class="carousel" data-autoplay="5000">
     <button class="carousel-btn carousel-prev" type="button" aria-label="Înapoi">‹</button>
     <div class="partners-track carousel-track">
       <!-- LOGO-URI CLIENȚI — ordonate după cifra de afaceri 2024 (mare → mic) -->
