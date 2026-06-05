@@ -146,6 +146,10 @@ section{ padding:4.5rem 5rem; }
 .carousel-prev{ left:1rem; }
 .carousel-next{ right:1rem; }
 .carousel-btn{ display:none; }
+/* săgeți discrete doar la galerie și recenzii (semi-transparente, ca să nu acopere conținutul) */
+#galerie .carousel-btn, #recenzii .carousel-btn{ display:flex; width:38px; height:38px; font-size:1.3rem;
+  background:rgba(26,26,24,.32); color:#fff; box-shadow:none; opacity:.55; }
+#galerie .carousel-btn:hover, #recenzii .carousel-btn:hover{ background:rgba(26,26,24,.78); opacity:1; }
 
 /* recenzii ca slider */
 .reviews-track{ display:flex; gap:1.5rem; padding:.5rem .25rem 1rem; }
