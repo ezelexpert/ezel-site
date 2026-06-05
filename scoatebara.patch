@@ -1,0 +1,196 @@
+From d9c5d5be8430361abb122226ff4ecacfad634951 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 5 Jun 2026 06:24:54 +0000
+Subject: [PATCH] Scoate bara de sus (nav) de pe toate paginile si ajusteaza
+ spatierea
+
+---
+ cat-costa-cazarea-muncitori-oradea.html    | 23 ++--------------------
+ cazare-muncitori-vs-hotel.html             | 23 ++--------------------
+ css/ezel.css                               |  6 +++---
+ ghid-cazare-muncitori-ingineri-oradea.html | 23 ++--------------------
+ index.html                                 | 23 ++--------------------
+ 5 files changed, 11 insertions(+), 87 deletions(-)
+
+diff --git a/cat-costa-cazarea-muncitori-oradea.html b/cat-costa-cazarea-muncitori-oradea.html
+index e5ece5f..34d56f8 100644
+--- a/cat-costa-cazarea-muncitori-oradea.html
++++ b/cat-costa-cazarea-muncitori-oradea.html
+@@ -48,30 +48,11 @@
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+-  <link rel="stylesheet" href="css/ezel.css?v=4">
+-  <script src="js/ezel.js?v=4" defer></script>
++  <link rel="stylesheet" href="css/ezel.css?v=5">
++  <script src="js/ezel.js?v=5" defer></script>
+ </head>
+ <body>
+ 
+-<nav>
+-  <a class="logo" href="index.html">
+-    
+-    <svg class="em" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 56 V30 a18 18 0 0 1 36 0 V56"/><path d="M24 56 V38 a8 8 0 0 1 16 0 V56"/><line x1="8" y1="56" x2="56" y2="56"/><circle class="key" cx="32" cy="13" r="2.4"/></svg>
+-    <span class="logo-txt"><span class="logo-name">EZEL</span><span class="logo-sub">B2B Accommodation</span></span>
+-  </a>
+-  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+-    <span></span><span></span><span></span>
+-  </button>
+-  <ul class="nav-links" id="nav-menu">
+-    <li><a href="index.html#avantaje">Avantaje</a></li>
+-    <li><a href="index.html#galerie">Galerie</a></li>
+-    <li><a href="index.html#recenzii">Recenzii</a></li>
+-    <li><a href="index.html#faq">Întrebări</a></li>
+-    <li><a href="index.html#contact">Contact</a></li>
+-    <li class="nav-links-cta"><a href="https://wa.me/40726925094" target="_blank" rel="noopener">Rezervă acum</a></li>
+-  </ul>
+-  <a href="https://wa.me/40726925094" class="nav-cta" target="_blank" rel="noopener">Rezervă acum</a>
+-</nav>
+ 
+ <main class="article-main">
+   <article class="container">
+diff --git a/cazare-muncitori-vs-hotel.html b/cazare-muncitori-vs-hotel.html
+index 36d1953..2f3e637 100644
+--- a/cazare-muncitori-vs-hotel.html
++++ b/cazare-muncitori-vs-hotel.html
+@@ -48,30 +48,11 @@
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+-  <link rel="stylesheet" href="css/ezel.css?v=4">
+-  <script src="js/ezel.js?v=4" defer></script>
++  <link rel="stylesheet" href="css/ezel.css?v=5">
++  <script src="js/ezel.js?v=5" defer></script>
+ </head>
+ <body>
+ 
+-<nav>
+-  <a class="logo" href="index.html">
+-    
+-    <svg class="em" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 56 V30 a18 18 0 0 1 36 0 V56"/><path d="M24 56 V38 a8 8 0 0 1 16 0 V56"/><line x1="8" y1="56" x2="56" y2="56"/><circle class="key" cx="32" cy="13" r="2.4"/></svg>
+-    <span class="logo-txt"><span class="logo-name">EZEL</span><span class="logo-sub">B2B Accommodation</span></span>
+-  </a>
+-  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+-    <span></span><span></span><span></span>
+-  </button>
+-  <ul class="nav-links" id="nav-menu">
+-    <li><a href="index.html#avantaje">Avantaje</a></li>
+-    <li><a href="index.html#galerie">Galerie</a></li>
+-    <li><a href="index.html#recenzii">Recenzii</a></li>
+-    <li><a href="index.html#faq">Întrebări</a></li>
+-    <li><a href="index.html#contact">Contact</a></li>
+-    <li class="nav-links-cta"><a href="https://wa.me/40726925094" target="_blank" rel="noopener">Rezervă acum</a></li>
+-  </ul>
+-  <a href="https://wa.me/40726925094" class="nav-cta" target="_blank" rel="noopener">Rezervă acum</a>
+-</nav>
+ 
+ <main class="article-main">
+   <article class="container">
+diff --git a/css/ezel.css b/css/ezel.css
+index 5aba7ae..a41b4da 100644
+--- a/css/ezel.css
++++ b/css/ezel.css
+@@ -51,7 +51,7 @@ nav.open .nav-toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg
+ .btn-secondary:hover{ background:var(--gold); color:var(--white); transform:translateY(-2px); }
+ 
+ /* ── HERO ── */
+-.hero{ position:relative; min-height:100vh; display:flex; align-items:center; padding-top:80px; overflow:hidden; }
++.hero{ position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; }
+ .hero::before{ content:''; position:absolute; inset:0; background:url('../poze/exterior-close.jpg') center/cover no-repeat; z-index:0; }
+ .hero::after{ content:''; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(247,243,236,.97) 0%, rgba(247,243,236,.9) 30%, rgba(247,243,236,.6) 62%, rgba(247,243,236,.28) 100%); }
+ .hero-left{ position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; max-width:640px; padding:6rem 4rem 6rem 5rem; }
+@@ -194,7 +194,7 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
+ /* ===========================================================
+    BLOG / ARTICOL
+    =========================================================== */
+-.article-main{ padding-top:120px; padding-bottom:5rem; }
++.article-main{ padding-top:2.5rem; padding-bottom:5rem; }
+ .container{ max-width:760px; margin:0 auto; padding:0 1.5rem; }
+ .container-wide{ max-width:1080px; margin:0 auto; padding:0 1.5rem; }
+ 
+@@ -287,6 +287,6 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
+   .footer-logo{ justify-content:center; }
+   .gallery-header{ padding:0 1.5rem; }
+   .gallery-scroll{ padding:0 1.5rem 1.5rem; }
+-  .article-main{ padding-top:100px; }
++  .article-main{ padding-top:1.5rem; }
+   .prose h2{ font-size:1.6rem; }
+ }
+diff --git a/ghid-cazare-muncitori-ingineri-oradea.html b/ghid-cazare-muncitori-ingineri-oradea.html
+index 46733c3..bd690ff 100644
+--- a/ghid-cazare-muncitori-ingineri-oradea.html
++++ b/ghid-cazare-muncitori-ingineri-oradea.html
+@@ -48,30 +48,11 @@
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+-  <link rel="stylesheet" href="css/ezel.css?v=4">
+-  <script src="js/ezel.js?v=4" defer></script>
++  <link rel="stylesheet" href="css/ezel.css?v=5">
++  <script src="js/ezel.js?v=5" defer></script>
+ </head>
+ <body>
+ 
+-<nav>
+-  <a class="logo" href="index.html">
+-    
+-    <svg class="em" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 56 V30 a18 18 0 0 1 36 0 V56"/><path d="M24 56 V38 a8 8 0 0 1 16 0 V56"/><line x1="8" y1="56" x2="56" y2="56"/><circle class="key" cx="32" cy="13" r="2.4"/></svg>
+-    <span class="logo-txt"><span class="logo-name">EZEL</span><span class="logo-sub">B2B Accommodation</span></span>
+-  </a>
+-  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+-    <span></span><span></span><span></span>
+-  </button>
+-  <ul class="nav-links" id="nav-menu">
+-    <li><a href="index.html#avantaje">Avantaje</a></li>
+-    <li><a href="index.html#galerie">Galerie</a></li>
+-    <li><a href="index.html#recenzii">Recenzii</a></li>
+-    <li><a href="index.html#faq">Întrebări</a></li>
+-    <li><a href="index.html#contact">Contact</a></li>
+-    <li class="nav-links-cta"><a href="https://wa.me/40726925094" target="_blank" rel="noopener">Rezervă acum</a></li>
+-  </ul>
+-  <a href="https://wa.me/40726925094" class="nav-cta" target="_blank" rel="noopener">Rezervă acum</a>
+-</nav>
+ 
+ <main class="article-main">
+   <article class="container">
+diff --git a/index.html b/index.html
+index f62995d..fac32ac 100644
+--- a/index.html
++++ b/index.html
+@@ -98,31 +98,12 @@
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+-  <link rel="stylesheet" href="css/ezel.css?v=4">
+-  <script src="js/ezel.js?v=4" defer></script>
++  <link rel="stylesheet" href="css/ezel.css?v=5">
++  <script src="js/ezel.js?v=5" defer></script>
+ </head>
+ <body id="top">
+ 
+ <!-- NAV -->
+-<nav>
+-  <a class="logo" href="#top">
+-    
+-    <svg class="em" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 56 V30 a18 18 0 0 1 36 0 V56"/><path d="M24 56 V38 a8 8 0 0 1 16 0 V56"/><line x1="8" y1="56" x2="56" y2="56"/><circle class="key" cx="32" cy="13" r="2.4"/></svg>
+-    <span class="logo-txt"><span class="logo-name">EZEL</span><span class="logo-sub">B2B Accommodation</span></span>
+-  </a>
+-  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+-    <span></span><span></span><span></span>
+-  </button>
+-  <ul class="nav-links" id="nav-menu">
+-    <li><a href="#avantaje">Avantaje</a></li>
+-    <li><a href="#galerie">Galerie</a></li>
+-    <li><a href="#recenzii">Recenzii</a></li>
+-    <li><a href="#faq">Întrebări</a></li>
+-    <li><a href="#contact">Contact</a></li>
+-    <li class="nav-links-cta"><a href="https://wa.me/40726925094" target="_blank" rel="noopener">Rezervă acum</a></li>
+-  </ul>
+-  <a href="https://wa.me/40726925094" class="nav-cta" target="_blank" rel="noopener">Rezervă acum</a>
+-</nav>
+ 
+ <!-- HERO -->
+ <section class="hero">
+-- 
+2.43.0
+
