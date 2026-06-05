@@ -224,6 +224,17 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 .float-call:hover{ transform:scale(1.1); box-shadow:0 12px 32px rgba(184,150,46,.55); }
 .float-call svg{ width:28px; height:28px; fill:#fff; }
 
+/* ── LOCATII / HARTA ── */
+.locations-main{ padding-top:2.5rem; padding-bottom:5rem; }
+#map{ width:100%; height:480px; border-radius:8px; border:1px solid rgba(184,150,46,.2); margin:2rem 0; }
+.loc-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.2rem; }
+.loc-card{ background:var(--card-bg); border:1px solid rgba(184,150,46,.15); border-radius:8px; padding:1.4rem 1.5rem; }
+.loc-card h3{ font-family:var(--serif); font-size:1.25rem; color:var(--ink); margin-bottom:.4rem; }
+.loc-card p{ font-size:.9rem; color:var(--muted); line-height:1.6; margin-bottom:.6rem; }
+.loc-card a{ color:var(--gold); text-decoration:none; font-weight:500; font-size:.88rem; }
+.loc-card a:hover{ text-decoration:underline; }
+@media (max-width:900px){ #map{ height:360px; } }
+
 /* ── ANIMATIONS ── */
 .fade-up{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
 .fade-up.visible{ opacity:1; transform:translateY(0); }
