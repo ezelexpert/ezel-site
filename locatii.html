@@ -90,7 +90,7 @@
     { name: "Locația 8", address: "Strada Nicolae Toma 11, Oradea" },
     { name: "Locația 9", address: "Strada Valentina Bostină 5, Oradea" },
     { name: "Locația 10", address: "Strada Ion Bradu 2B, Oradea" },
-    { name: "Locația 11", address: "Calea Aradului 4, Oradea" },
+    { name: "Locația 11", address: "Strada Episcop Doctor Vasile Coman 5, Oradea", link: "https://maps.app.goo.gl/xtwyAyCpirXKQMHK8" },
     { name: "Locația 12", address: "Strada Lămâiței 8, Cihei" },
     { name: "Locația 13", address: "Aleea Salca 1, Oradea" },
     { name: "Locația 14", address: "Strada Corneliu Zdrehuș 3, Oradea" },
@@ -109,6 +109,7 @@
     var bounds = [];
 
     function mapsUrl(loc) {
+      if (loc.link) return loc.link;
       return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(loc.address + ', Bihor');
     }
     function addCard(loc) {
