@@ -128,28 +128,44 @@
       addCard(loc);
     }
 
-    // geocodare secvențială (politicos față de OpenStreetMap) + cache local
+    // geocodare: Photon (komoot) cu Nominatim ca rezervă
+    function geocode(loc, cb) {
+      var q = encodeURIComponent(loc.address + ', Bihor, România');
+      fetch('https://photon.komoot.io/api/?limit=1&lat=47.0722&lon=21.9211&q=' + q)
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && d.features && d.features[0]) {
+            var c = d.features[0].geometry.coordinates; // [lon, lat]
+            return cb(c[1], c[0]);
+          }
+          return fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + q)
+            .then(function (r) { return r.json(); })
+            .then(function (n) {
+              if (n && n[0]) cb(parseFloat(n[0].lat), parseFloat(n[0].lon));
+              else cb(null, null);
+            });
+        })
+        .catch(function () { cb(null, null); });
+    }
+
+    // secvențial + cache local
     var i = 0;
     function next() {
       if (i >= EZEL_LOCATIONS.length) return;
       var loc = EZEL_LOCATIONS[i++];
       if (loc.lat && loc.lng) { place(loc, loc.lat, loc.lng); return next(); }
-      var key = 'ezelgeo:' + loc.address;
+      var key = 'ezelgeo2:' + loc.address;
       try {
         var cached = localStorage.getItem(key);
-        if (cached) { var p = JSON.parse(cached); place(loc, p[0], p[1]); return next(); }
+        if (cached) { var p = JSON.parse(cached); if (p) { place(loc, p[0], p[1]); return next(); } }
       } catch (e) {}
-      fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + encodeURIComponent(loc.address + ', Bihor, România'))
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          if (d && d[0]) {
-            var lat = parseFloat(d[0].lat), lng = parseFloat(d[0].lon);
-            try { localStorage.setItem(key, JSON.stringify([lat, lng])); } catch (e) {}
-            place(loc, lat, lng);
-          } else { addCard(loc); }
-        })
-        .catch(function () { addCard(loc); })
-        .finally(function () { setTimeout(next, 1100); });
+      geocode(loc, function (lat, lng) {
+        if (lat != null && lng != null) {
+          try { localStorage.setItem(key, JSON.stringify([lat, lng])); } catch (e) {}
+          place(loc, lat, lng);
+        } else { addCard(loc); }
+        setTimeout(next, 700);
+      });
     }
     next();
   })();
