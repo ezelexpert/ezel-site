@@ -79,7 +79,16 @@ section{ padding:4.5rem 5rem; }
 .section-sub{ font-size:.95rem; color:var(--muted); line-height:1.8; max-width:520px; }
 
 #despre{ background:var(--warm); }
-#despre .section-sub{ max-width:640px; }
+
+/* ── Texte centrate pe homepage (hero-ul rămâne aliniat la stânga) ── */
+.section-label, .section-title{ text-align:center; }
+.section-sub{ text-align:center; max-width:600px; margin-left:auto; margin-right:auto; }
+.features-header, .reviews-header{ margin-left:auto; margin-right:auto; text-align:center; }
+.gallery-header{ text-align:center; }
+#despre .hero-actions{ justify-content:center; }
+.feat-card{ text-align:center; }
+.review-card{ text-align:center; }
+.reviewer{ justify-content:center; }
 /* ── FEATURES ── */
 #avantaje{ background:var(--ink); }
 #avantaje .section-label{ color:var(--gold-lt); }
@@ -228,7 +237,7 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 
 /* ── LOCATII / HARTA ── */
 .locations-main{ padding-top:120px; padding-bottom:5rem; }
-#map{ width:100%; height:480px; border-radius:8px; border:1px solid rgba(184,150,46,.2); margin:2rem 0; }
+#map{ width:100%; height:480px; border-radius:14px; overflow:hidden; border:3px solid var(--gold); box-shadow:0 12px 30px rgba(26,26,24,.18); margin:2rem 0; }
 .loc-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.2rem; }
 .loc-card{ background:var(--card-bg); border:1px solid rgba(184,150,46,.15); border-radius:8px; padding:1.4rem 1.5rem; }
 .loc-card h3{ font-family:var(--serif); font-size:1.25rem; color:var(--ink); margin-bottom:.4rem; }
