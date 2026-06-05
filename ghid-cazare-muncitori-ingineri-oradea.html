@@ -48,11 +48,30 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/ezel.css?v=5">
-  <script src="js/ezel.js?v=5" defer></script>
+  <link rel="stylesheet" href="css/ezel.css?v=6">
+  <script src="js/ezel.js?v=6" defer></script>
 </head>
 <body>
 
+<nav>
+  <a class="logo" href="index.html">
+    
+    <svg class="em" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 56 V30 a18 18 0 0 1 36 0 V56"/><path d="M24 56 V38 a8 8 0 0 1 16 0 V56"/><line x1="8" y1="56" x2="56" y2="56"/><circle class="key" cx="32" cy="13" r="2.4"/></svg>
+    <span class="logo-txt"><span class="logo-name">EZEL</span><span class="logo-sub">B2B Accommodation</span></span>
+  </a>
+  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-menu">
+    <li><a href="index.html#avantaje">Avantaje</a></li>
+    <li><a href="index.html#galerie">Galerie</a></li>
+    <li><a href="index.html#recenzii">Recenzii</a></li>
+    <li><a href="index.html#faq">Întrebări</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li class="nav-links-cta"><a href="https://wa.me/40726925094" target="_blank" rel="noopener">Rezervă acum</a></li>
+  </ul>
+  <a href="https://wa.me/40726925094" class="nav-cta" target="_blank" rel="noopener">Rezervă acum</a>
+</nav>
 
 <main class="article-main">
   <article class="container">
@@ -161,7 +180,6 @@
 
 <footer>
   <div class="footer-logo"> EZEL</div>
-  <nav class="footer-nav"><a href="index.html">Acasă</a><a href="index.html#avantaje">Avantaje</a><a href="index.html#contact">Contact</a></nav>
   <p class="footer-text">© 2026 EZEL · B2B Accommodation · Oradea</p>
 </footer>
 
