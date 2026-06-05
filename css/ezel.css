@@ -137,13 +137,15 @@ section{ padding:7rem 5rem; }
 
 /* recenzii ca slider */
 .reviews-track{ display:flex; gap:1.5rem; padding:.5rem .25rem 1rem; }
-#recenzii .review-card{ flex:0 0 360px; max-width:84vw; }
+#recenzii .review-card{ flex:0 0 calc((100% - 3rem) / 3); max-width:none; }
+/* galerie: câte 4 pe rând */
+#galerie .gallery-item{ flex:0 0 calc((100% - 3rem) / 4); width:auto; }
 
 /* ── PARTENERI / CLIENTI ── */
 #parteneri{ background:var(--cream); padding:6rem 0; }
 .partners-header{ max-width:640px; margin:0 auto 3rem; padding:0 5rem; text-align:center; }
 .partners-track{ display:flex; gap:2rem; padding:.5rem 5rem 1rem; }
-.partner-logo{ flex:0 0 210px; height:120px; display:flex; align-items:center; justify-content:center; padding:.8rem;
+.partner-logo{ flex:0 0 calc((100% - 6rem) / 4); height:120px; display:flex; align-items:center; justify-content:center; padding:.8rem;
   background:#fff; border:1px solid rgba(184,150,46,.18); border-radius:10px; overflow:hidden; }
 .partner-logo img{ max-width:100%; max-height:100%; object-fit:contain; transition:transform .3s; }
 .partner-logo:hover img{ transform:scale(1.05); }
@@ -318,6 +320,9 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
   .carousel-prev{ left:.4rem; }
   .carousel-next{ right:.4rem; }
   .partners-header{ padding:0 1.5rem; }
-  .partners-track{ padding:.5rem 1.5rem 1rem; }
-  #recenzii .review-card{ flex-basis:82vw; }
+  .partners-track{ padding:.5rem 1.5rem 1rem; gap:1rem; }
+  /* telefon: câte 2 pe rând */
+  #galerie .gallery-item{ flex-basis:calc((100% - 1rem) / 2); }
+  .partner-logo{ flex-basis:calc((100% - 1rem) / 2); }
+  #recenzii .review-card{ flex-basis:100%; }
 }
