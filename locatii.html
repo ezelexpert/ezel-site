@@ -100,9 +100,19 @@
     var map = L.map('map', { scrollWheelZoom: false });
     // vedere inițială largă: Oradea + împrejurimi (Oșorhei, Cihei, Haieu)
     map.fitBounds([[46.95, 21.83], [47.11, 22.07]]);
+    // satelit + etichete (străzi / zone) = hartă hibridă
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 19, attribution: 'Tiles &copy; Esri'
     }).addTo(map);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19
+    }).addTo(map);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19
+    }).addTo(map);
+
+    // cerc auriu în jurul Oradei
+    L.circle([47.0722, 21.9211], { radius: 5200, color: '#b8962e', weight: 3, fillColor: '#b8962e', fillOpacity: 0.06 }).addTo(map);
 
     var bounds = [];
 
