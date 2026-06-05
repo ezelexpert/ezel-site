@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="css/ezel.css?v=20">
-  <script src="js/ezel.js?v=20" defer></script>
+  <link rel="stylesheet" href="css/ezel.css?v=21">
+  <script src="js/ezel.js?v=21" defer></script>
 </head>
 <body>
 
@@ -35,6 +35,7 @@
   </button>
   <ul class="nav-links" id="nav-menu">
     <li><a href="index.html#avantaje">Avantaje</a></li>
+    <li><a href="index.html#despre">Despre</a></li>
     <li><a href="index.html#galerie">Galerie</a></li>
     <li><a href="locatii.html">Locații</a></li>
     <li><a href="index.html#recenzii">Recenzii</a></li>
@@ -51,10 +52,6 @@
     <p class="article-lead">Spațiile EZEL de cazare pentru muncitori și ingineri sunt în Oradea, aproape de zonele industriale și de căile principale de acces. Vezi-le pe hartă mai jos.</p>
 
     <div id="map"></div>
-
-    <div class="loc-grid" id="loc-grid">
-      <!-- Cardurile cu adrese se generează automat din lista de mai jos (din script). -->
-    </div>
   </div>
 </main>
 
@@ -101,29 +98,17 @@
 
   (function () {
     var map = L.map('map', { scrollWheelZoom: false }).setView([47.0722, 21.9211], 12);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19, attribution: '&copy; OpenStreetMap'
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19, attribution: 'Tiles &copy; Esri'
     }).addTo(map);
 
-    var grid = document.getElementById('loc-grid');
     var bounds = [];
 
-    function mapsUrl(loc) {
-      if (loc.link) return loc.link;
-      return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(loc.address + ', Bihor');
-    }
-    function addCard(loc) {
-      var div = document.createElement('div');
-      div.className = 'loc-card';
-      div.innerHTML = '<h3>' + loc.name + '</h3><p>' + loc.address + '</p>' +
-        '<a href="' + mapsUrl(loc) + '" target="_blank" rel="noopener">Vezi pe hartă →</a>';
-      grid.appendChild(div);
-    }
+    // doar pin pe hartă (fără text, fără card)
     function place(loc, lat, lng) {
-      L.marker([lat, lng]).addTo(map).bindPopup('<strong>' + loc.name + '</strong><br>' + loc.address);
+      L.marker([lat, lng]).addTo(map);
       bounds.push([lat, lng]);
-      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
-      addCard(loc);
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
     }
 
     // geocodare: Photon (komoot) cu Nominatim ca rezervă
@@ -161,7 +146,7 @@
         if (lat != null && lng != null) {
           try { localStorage.setItem(key, JSON.stringify([lat, lng])); } catch (e) {}
           place(loc, lat, lng);
-        } else { addCard(loc); }
+        }
         setTimeout(next, 700);
       });
     }
