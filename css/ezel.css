@@ -225,7 +225,7 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 .float-call svg{ width:28px; height:28px; fill:#fff; }
 
 /* ── LOCATII / HARTA ── */
-.locations-main{ padding-top:2.5rem; padding-bottom:5rem; }
+.locations-main{ padding-top:120px; padding-bottom:5rem; }
 #map{ width:100%; height:480px; border-radius:8px; border:1px solid rgba(184,150,46,.2); margin:2rem 0; }
 .loc-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.2rem; }
 .loc-card{ background:var(--card-bg); border:1px solid rgba(184,150,46,.15); border-radius:8px; padding:1.4rem 1.5rem; }
@@ -246,7 +246,8 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 .container{ max-width:760px; margin:0 auto; padding:0 1.5rem; }
 .container-wide{ max-width:1080px; margin:0 auto; padding:0 1.5rem; }
 
-.breadcrumb{ font-size:.78rem; color:var(--muted); letter-spacing:.04em; margin-bottom:2rem; }
+.breadcrumb{ position:static; display:block; background:none; backdrop-filter:none; box-shadow:none; border:none; padding:0; z-index:auto;
+  font-size:.78rem; color:var(--muted); letter-spacing:.04em; margin-bottom:2rem; }
 .breadcrumb a{ color:var(--gold); text-decoration:none; }
 .breadcrumb a:hover{ text-decoration:underline; }
 .breadcrumb span{ margin:0 .4rem; opacity:.5; }
