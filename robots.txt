@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ezel.ro/sitemap.xml
+Sitemap: https://www.ezel.ro/sitemap.xml
