@@ -219,6 +219,10 @@ section{ padding:4.5rem 5rem; }
 footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,.06); }
 .footer-logo{ display:flex; align-items:center; gap:.6rem; font-family:var(--serif); font-size:1.45rem; color:var(--cream); letter-spacing:.16em; }
 .footer-logo svg.footer-mark{ height:30px; width:auto; flex:0 0 auto; }
+.footer-social{ display:flex; justify-content:center; gap:.7rem; margin-top:1.2rem; }
+.footer-social a{ display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:rgba(247,243,236,.09); color:var(--cream); transition:background .2s, color .2s, transform .2s; }
+.footer-social a:hover{ background:var(--gold); color:#16273d; transform:translateY(-2px); }
+.footer-social svg{ fill:currentColor; }
 .footer-logo .em{ width:26px; height:26px; flex:0 0 auto; }
 .footer-logo .em path, .footer-logo .em line{ stroke:var(--gold-lt); fill:none; stroke-width:2.8; stroke-linecap:round; stroke-linejoin:round; }
 .footer-logo .em .key{ fill:var(--gold-lt); stroke:none; }
