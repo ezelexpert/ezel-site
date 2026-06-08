@@ -16,7 +16,7 @@ img{ display:block; }
 a{ color:inherit; }
 
 /* ── NAV ── */
-nav{ position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center;
+nav:not(.footer-nav){ position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center;
   justify-content:space-between; padding:1rem 4rem; background:rgba(247,243,236,.97);
   backdrop-filter:blur(12px); border-bottom:1px solid rgba(184,150,46,.25);
   box-shadow:0 2px 16px rgba(26,26,24,.08); }
@@ -341,7 +341,7 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 
 /* ── RESPONSIVE ── */
 @media (max-width:900px){
-  nav{ padding:.85rem 1.25rem; flex-wrap:wrap; }
+  nav:not(.footer-nav){ padding:.85rem 1.25rem; flex-wrap:wrap; }
   .nav-toggle{ display:flex; order:3; }
   .nav-cta{ display:none; }
   .nav-links{ order:4; flex-basis:100%; width:100%; flex-direction:column; gap:0; align-items:stretch;
