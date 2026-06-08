@@ -223,9 +223,6 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 .footer-social a{ display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:rgba(247,243,236,.09); color:var(--cream); transition:background .2s, color .2s, transform .2s; }
 .footer-social a:hover{ background:var(--gold); color:#16273d; transform:translateY(-2px); }
 .footer-social svg{ fill:currentColor; }
-.footer-nav{ display:flex; flex-wrap:wrap; justify-content:center; gap:.4rem 1.4rem; margin-top:1.2rem; }
-.footer-nav a{ color:rgba(247,243,236,.6); text-decoration:none; font-size:.82rem; letter-spacing:.06em; text-transform:uppercase; transition:color .2s; }
-.footer-nav a:hover{ color:var(--gold-lt); }
 
 /* ── BLOG ── */
 .blog-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1.6rem; margin-top:2.6rem; }
@@ -239,8 +236,8 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 .footer-logo .em path, .footer-logo .em line{ stroke:var(--gold-lt); fill:none; stroke-width:2.8; stroke-linecap:round; stroke-linejoin:round; }
 .footer-logo .em .key{ fill:var(--gold-lt); stroke:none; }
 .footer-text{ font-size:.78rem; color:rgba(247,243,236,.3); }
-.footer-nav{ display:flex; gap:1.4rem; flex-wrap:wrap; }
-.footer-nav a{ font-size:.78rem; color:rgba(247,243,236,.5); text-decoration:none; }
+.footer-nav{ display:flex; gap:.5rem 1.4rem; flex-wrap:wrap; justify-content:center; margin-top:1.2rem; }
+.footer-nav a{ font-size:.8rem; letter-spacing:.04em; text-transform:uppercase; color:rgba(247,243,236,.6); text-decoration:none; transition:color .2s; }
 .footer-nav a:hover{ color:var(--gold-lt); }
 
 /* ── FLOATING WHATSAPP ── */
