@@ -223,6 +223,18 @@ footer{ background:#111110; padding:3rem 5rem; display:flex; justify-content:spa
 .footer-social a{ display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:rgba(247,243,236,.09); color:var(--cream); transition:background .2s, color .2s, transform .2s; }
 .footer-social a:hover{ background:var(--gold); color:#16273d; transform:translateY(-2px); }
 .footer-social svg{ fill:currentColor; }
+.footer-nav{ display:flex; flex-wrap:wrap; justify-content:center; gap:.4rem 1.4rem; margin-top:1.2rem; }
+.footer-nav a{ color:rgba(247,243,236,.6); text-decoration:none; font-size:.82rem; letter-spacing:.06em; text-transform:uppercase; transition:color .2s; }
+.footer-nav a:hover{ color:var(--gold-lt); }
+
+/* ── BLOG ── */
+.blog-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1.6rem; margin-top:2.6rem; }
+.blog-card{ display:flex; flex-direction:column; background:var(--white); border:1px solid var(--warm); border-radius:14px; padding:1.7rem 1.6rem; text-decoration:none; color:inherit; transition:box-shadow .25s, transform .25s, border-color .25s; }
+.blog-card:hover{ box-shadow:0 16px 38px rgba(26,26,24,.10); transform:translateY(-4px); border-color:var(--gold-lt); }
+.blog-tag{ align-self:flex-start; font-family:var(--sans); font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); background:rgba(184,150,46,.10); padding:.28rem .65rem; border-radius:999px; margin-bottom:.9rem; }
+.blog-card h2{ font-family:var(--serif); font-size:1.45rem; font-weight:600; line-height:1.25; color:var(--ink); margin-bottom:.55rem; }
+.blog-card p{ color:var(--muted); font-size:.95rem; line-height:1.6; flex:1; margin:0; }
+.blog-read{ margin-top:1.2rem; color:var(--gold); font-weight:600; font-size:.9rem; letter-spacing:.02em; }
 .footer-logo .em{ width:26px; height:26px; flex:0 0 auto; }
 .footer-logo .em path, .footer-logo .em line{ stroke:var(--gold-lt); fill:none; stroke-width:2.8; stroke-linecap:round; stroke-linejoin:round; }
 .footer-logo .em .key{ fill:var(--gold-lt); stroke:none; }
