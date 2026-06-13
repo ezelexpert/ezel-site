@@ -1,0 +1,64 @@
+/* ============================================================
+   EZEL — Animații la scroll (GSAP + ScrollTrigger)
+   Se încarcă DOAR pe index.html, DUPĂ css/ezel.css.
+
+   Principiu (progressive enhancement):
+   ascundem conținutul DOAR când JS rulează ȘI mișcarea e permisă
+   — clasa .anim pe <html>, pusă de scriptul-gardian din <head>.
+   Fără JS sau cu prefers-reduced-motion => totul vizibil, zero layout shift.
+   Animăm exclusiv opacity / transform / clip-path (fără reflow).
+   ============================================================ */
+
+/* 1) Neutralizăm ascunderea de bază a .fade-up (din ezel.css).
+      Astfel, în lipsa JS, conținutul rămâne complet vizibil. */
+.fade-up { opacity: 1; transform: none; transition: none; }
+
+/* 2) Re-ascundem DOAR când animăm (html.anim). GSAP revelează apoi inline.
+      (html.anim .fade-up are specificitate mai mare decât .fade-up.visible,
+       deci observer-ul vechi devine inofensiv — îl lăsăm cum e.) */
+html.anim .fade-up { opacity: 0; transform: translateY(28px); }
+
+/* --- HERO: titlul apare pe linii, cu mască --- */
+.hero-title .line-mask  { display: block; overflow: hidden; }
+.hero-title .line-inner { display: block; }
+html.anim .hero-title .line-inner { transform: translateY(110%); }
+
+/* --- Titluri de secțiune: cuvântul accentuat (italic) cu wipe stânga → dreapta --- */
+.section-title em { display: inline-block; }
+html.anim .section-title em { clip-path: inset(0 100% 0 0); }
+
+/* --- GALERIE: fade + scale ușor --- */
+html.anim #galerie .gallery-item { opacity: 0; transform: scale(1.04); }
+
+/* --- DESPRE: contoare crescătoare, fără reflow în text --- */
+.count { display: inline-block; font-variant-numeric: tabular-nums; text-align: left; }
+
+/* will-change doar pe ce se animă efectiv */
+html.anim .fade-up,
+html.anim .hero-title .line-inner,
+html.anim .section-title em,
+html.anim #galerie .gallery-item { will-change: opacity, transform; }
+
+/* --- PARTENERI: marquee continuu, infinit --- */
+#parteneri .marquee { overflow: hidden; padding: .5rem 1.5rem 1rem; }
+#parteneri .marquee__track {
+  display: flex;
+  flex-wrap: wrap;           /* fără JS / mișcare redusă: logo-urile se așază pe rânduri */
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+/* doar când animăm, aliniem pe un singur rând pentru banda continuă */
+html.anim #parteneri .marquee__track {
+  flex-wrap: nowrap;
+  width: max-content;
+  justify-content: flex-start;
+  will-change: transform;
+}
+/* în marquee, fiecare logo are lățime intrinsecă (nu 1/4 din container) */
+#parteneri .marquee__track .partner-logo { flex: 0 0 auto; width: 170px; }
+
+@media (max-width: 768px) {
+  #parteneri .marquee { padding: .5rem 1rem 1rem; }
+  #parteneri .marquee__track .partner-logo { width: 130px; }
+}
